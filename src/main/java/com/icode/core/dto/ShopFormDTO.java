@@ -9,8 +9,18 @@ import com.icode.core.model.Shop;
  * Time: 下午11:11
  */
 public class ShopFormDTO {
+    private String guid;
     private String name;
     private String description;
+
+    public ShopFormDTO() {
+    }
+
+    public ShopFormDTO(Shop shop) {
+        this.guid = shop.getGuid();
+        this.name = shop.getName();
+        this.description = shop.getDescription();
+    }
 
     public String getName() {
         return name;
@@ -30,5 +40,13 @@ public class ShopFormDTO {
 
     public Shop toShop() {
         return new Shop(this.name, this.description);
+    }
+
+    public String getGuid() {
+        return guid;
+    }
+
+    public void setGuid(String guid) {
+        this.guid = guid;
     }
 }

@@ -23,7 +23,7 @@ public abstract class AbstractEntity {
     private Integer id;
 
     @Column
-    private Integer version;
+    private Integer version = 0;
 
     @Column
     private Boolean active = Boolean.TRUE;
@@ -38,4 +38,16 @@ public abstract class AbstractEntity {
     @Column(name = "last_modify_time", columnDefinition = "datetime")
     @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
     private DateTime lastModifyTime = JodaTimeUtils.now();
+
+    public Boolean getActive() {
+        return active;
+    }
+
+    public String getGuid() {
+        return guid;
+    }
+
+    public Integer getId() {
+        return id;
+    }
 }
