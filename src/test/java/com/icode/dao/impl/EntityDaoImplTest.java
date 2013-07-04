@@ -1,6 +1,7 @@
 package com.icode.dao.impl;
 
 import com.icode.core.model.Shop;
+import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests;
 import org.springframework.transaction.annotation.Transactional;
